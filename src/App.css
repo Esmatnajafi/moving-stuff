@@ -41,3 +41,67 @@
 		transform: translateX(100px);
 	}
 }
+/* App.css */
+.radio-wrapper {
+	display: inline-block;
+  }
+  
+  /* Hide the actual radio button */
+  input[type="radio"] {
+	display: none; /* Hide the default radio button */
+  }
+  
+  /* Style the label to resemble a radio button */
+  label {
+	display: inline-block;
+	position: relative;
+	padding: 10px 30px;
+	cursor: pointer;
+	border-radius: 30px;
+	background: linear-gradient(45deg, #00c9ff, #92fe9d);
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+  }
+  
+  /* Hover effect */
+  label:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling the input when checked */
+  input[type="radio"]:checked + label {
+	background: linear-gradient(45deg, #7928ca, #ff0080);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dot for checked state */
+  input[type="radio"]:checked + label::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #fff;
+  }
+  
+  /* Dot for unchecked state */
+  input[type="radio"] + label::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	width: 18px;
+	height: 18px;
+	border: 2px solid #999;
+	border-radius: 50%;
+  }
+  

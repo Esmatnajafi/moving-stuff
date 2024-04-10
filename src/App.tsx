@@ -23,6 +23,12 @@ function App() {
 				New div
 			</div>
 			<div className={`new ${chosen && "newColor"}`}>Gorilla</div>
+			<div className="radio-wrapper">
+				<input type="radio" id="radio1" name="radio"  checked={chosen} onChange={() => {
+					setChosen(true);
+				}} />
+			</div>
+			<label htmlFor="radio1">Click</label>
 		</>
 	);
 }
